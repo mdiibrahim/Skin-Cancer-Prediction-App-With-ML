@@ -1,0 +1,48 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Cancer Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Skin Cancer Prediction</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <div class="form-container">
+           <div class="file-input-container">
+               <div class="file-input-label">Choose an Image</div>
+    <input type="file" name="file" class="file-input " accept="image/*" required onchange="previewImage(this)">
+
+</div>
+            <div id="image-preview"></div>
+            <div class="button-container">
+                <button type="submit">Predict</button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        // JavaScript function to preview the selected image
+        function previewImage(input) {
+            var preview = document.getElementById('image-preview');
+            preview.innerHTML = '';
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var image = document.createElement('img');
+                    image.src = e.target.result;
+                    image.width = 64;  // Set width to 64 pixels
+                    image.height = 64; // Set height to 64 pixels
+                    preview.appendChild(image);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>

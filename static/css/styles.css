@@ -1,0 +1,99 @@
+/* Add these styles to your CSS file */
+
+body {
+    font-family: 'Poppins', sans-serif; /* Use the 'Poppins' font for the entire body */
+    background-color: #d5f5e3; /* Light pastel green background for a soothing effect */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+form {
+    border: 2px solid #3498db; /* Blue border for the form */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+    text-align: center;
+}
+.button-container {
+    text-align: center;
+}
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+#image-preview {
+    margin-top: 10px; /* Adjust the top margin for spacing */
+}
+
+/* Styles for the previewed image */
+#image-preview img {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ccc; /* Add a border for visibility */
+    margin-right: 10px; /* Add margin for spacing */
+}
+strong {
+    color: #ff0000; /* Blue color for the h3 tag */
+    margin-left: 5px; /* Adjust the top margin for spacing */
+
+}
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+/* Add these styles to your CSS file */
+
+/* Style for the file input container */
+.file-input-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* Style for the file input */
+.file-input {
+    font-size: 16px; /* Adjust the font size */
+    padding: 10px; /* Adjust padding for spacing */
+    cursor: pointer;
+    background-color: #3498db; /* Button color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+}
+
+/* Style for the file input's label */
+.file-input-label {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    margin-top:30px
+}
+
+/* Hide the actual file input */
+.file-input-hidden {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}

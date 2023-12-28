@@ -1,0 +1,43 @@
+<!-- templates/result.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+
+    <form action="/predict" method="get">
+        <p>The predicted class is: <strong>{{ prediction }}</strong></p>
+
+        {% if prediction == 'basal cell carcinoma' %}
+            <div class="message-container">
+                <p class="cancer-text"> Ohhho!! <strong>Basal Cell Carcinoma</strong>detected! Consult with a healthcare professional.</p>
+                <p class="motivation-text">Remember, early detection is crucial for effective treatment.</p>
+            </div>
+        {% elif prediction == 'melanoma' %}
+            <div class="message-container">
+                <p class="cancer-text"> Ohhho!! <strong>Melanoma</strong> detected! Consult with a healthcare professional.</p>
+                <p class="motivation-text">Early intervention is key for melanoma treatment.</p>
+            </div>
+        {% elif prediction == 'pigmented benign keratosis' %}
+            <div class="message-container">
+                <p class="success-text">Ohhho!!  <strong>Pigmented Benign Keratosis</strong> detected! Keep practicing good skin health!</p>
+            </div>
+        {% else %}
+            <div class="message-container">
+                <p class="unknown-text">Unknown prediction. Please consult with a healthcare professional for further evaluation.</p>
+            </div>
+        {% endif %}
+
+        <div class="button-container">
+            <button type="submit">Upload Another Image?</button>
+        </div>
+    </form>
+</body>
+</html>
