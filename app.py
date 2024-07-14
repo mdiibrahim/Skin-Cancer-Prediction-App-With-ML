@@ -2,8 +2,6 @@ from flask import Flask, render_template, request, jsonify
 import cv2
 import numpy as np
 import pickle
-from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
 
 app = Flask(__name__)
 
