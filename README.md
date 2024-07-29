@@ -78,6 +78,11 @@ Make sure you have the following installed:
 
 3. **Upload an image to get a skin cancer prediction.**
 
+## Datasets
+
+The project uses datasets that can be accessed from the following Google Drive link:
+[Datasets](https://drive.google.com/drive/folders/1bXDAEVxtPcJYgNUDiI66DKUTiQmaHVt-?usp=sharing)
+
 ## Usage
 
 - **Upload Image**: Use the web app to upload an image.
